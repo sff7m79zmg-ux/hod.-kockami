@@ -36,15 +36,90 @@ Next, I wanted to add the ability for the user to choose how many dice they want
 
 Since `input()` returns a string, I needed to convert it into an integer. For this purpose, I used `int()`, which converts a string containing a valid integer into an integer. This means that the program expects a whole number rather than a decimal number.
 
-But now I encountered a problem. If the user entered a value which my program could not convert into an integer, it would crash. The same problem occurred if the user entered something like `b` or another word. So now I had to find a way to prevent this. For this problem, I used a `try` statement together with `except`. This allowed the program to handle invalid input. If I entered a letter or a decimal number such as `2.5`, it displayed an error message instead of crashing. My remaining problem was thet program still accepted input that was not within the supported range, such as 0 or a number greater than 2. I needed to find a solution, so I considered looking for information on W3Schools or another website, or using an AI tool as a last resort. When I was looking at my program, I remembered that I could use `if` statements, so I did. I added conditions to check the selected number. If the entered number was equal to 1, the program would roll one die. If `thechosen` was equal to 2, it would roll two dice. However, if the selected number did not match either option, the program would display a message explaining that the number was not supported. I would say that I successfully completed this part of the project because the user can choose between one and two dice, and the program handles invalid input. However, the program currently ends after displaying an error message instead of asking the user to try again. After sending this text to ChatGPT, I got the idea of asking the user to enter their choice again if their first input was invalid. I also considered asking whether they wanted to continue the simulation. ChatGPT suggested that I learn how to use `while` loops. I found the `while` loop tutorial on W3Schools, but I needed more explanation. Therefore, I asked ChatGPT to explain it to me without showing me exactly where to implement it in my program. I wanted to understand the concept first and then use it in my code. Since it was late and I was tired after researching the concept, I decided not to include the `while` loop in this phase. However, my plan for using it developed further. I want to use it to validate the number of dice, allowing the user to choose between one, two, or three dice. If the user enters a number outside this range, the program will ask them to enter another number. I also plan to make the simulation continue until the user decides to stop. After every five rolls, the program will ask whether the player wants to continue. If they choose yes, the simulation will continue. If they choose no, the program will analyse the recorded rolls and display statistics. In this part, I learned and refreshed several concepts and started thinking more about how users interact with my program
+But now I encountered a problem. If the user entered a value which my program could not convert into an integer, it would crash. The same problem occurred if the user entered something like `b` or another word. So now I had to find a way to prevent this. For this problem, I used a `try` statement together with `except`. This allowed the program to handle invalid input. If I entered a letter or a decimal number such as `2.5`, it displayed an error message instead of crashing. My remaining problem was thet program still accepted input that was not within the supported range, such as 0 or a number greater than 2. I needed to find a solution, so I considered looking for information on W3Schools or another website, or using an AI tool as a last resort. When I was looking at my program, I remembered that I could use `if` statements, so I did. I added conditions to check the selected number. If the entered number was equal to 1, the program would roll one die. If `thechosen` was equal to 2, it would roll two dice. However, if the selected number did not match either option, the program would display a message explaining that the number was not supported. I would say that I successfully completed this part of the project because the user can choose between one and two dice, and the program handles invalid input. However, the program currently ends after displaying an error message instead of asking the user to try again. After sending this text to ChatGPT, I got the idea of asking the user to enter their choice again if their first input was invalid. I also considered asking whether they wanted to continue the simulation. ChatGPT suggested that I learn how to use `while` loops. I found the `while` loop tutorial on W3Schools, but I needed more explanation. Therefore, I asked ChatGPT to explain it to me without showing me exactly where to implement it in my program. I wanted to understand the concept first and then use it in my code. Since it was late and I was tired after researching the concept, I decided not to include the `while` loop in this phase. However, my plan for using it developed further. I want to use it to validate the number of dice, allowing the user to choose between one, two, or three dice. If the user enters a number outside this range, the program will ask them to enter another number. I also plan to make the simulation continue until the user decides to stop. After every five rolls, the program will ask whether the player wants to continue. If they choose yes, the simulation will continue. If they choose no, the program will analyse the recorded rolls and display statistics. In this part, I learned and refreshed several concepts and started thinking more about how users interact with my program.
+
 *What I learned:*
 - I refreshed my knowledge of the `try` statement and `if` statements, and learned how `except` can be used to handle errors.
 - I refreshed my understanding of how to recognise the connections between different elements.
 - I started thinking more from the user's perspective, which helped me to identify potential mistakes and improve input validation.
 - I also learned about `while` loops and how they can repeat code, although I have not implemented one in my program yet.
+
 *Problems:*
 - I initially did not know how to prevent the program from crashing when the user entered letters or words instead of a number. 
 - I needed to understand how `int()` converts input into an integer and why values such as letters or decimal numbers entered as text cannot be converted directly. 
 - Even after handling conversion errors, I needed to find a way to reject numbers outside the supported range, such as 0 or numbers greater than 2.
 - I struggled to understand how `while` loops work and how to use them in my program, so I decided to postpone implementing one until I understood the concept better. 
 - I realised that handling invalid input and allowing the user to repeat the simulation require additional logic.
+
+### Part 3 
+As mentioned before, in this part I will only add one more die. However, I am now thinking about adding an option that allows the user to choose how many dice they want to roll instead of having to enter the number manually. 
+
+First ,I will make the program work with three dice. Then, I will give some more thought to how I could implement the option to choose the number of dice.
+
+I think adding one more die will be easy and quick. I believe it will be enough to add one more `elif` statement and a new variable called `kocka3`.
+
+I have now added the elif statement and the `kocka3` variable. Next, I will test wether everything works correctly.
+
+It is working as expected! Ma main goal of Part 3 is now complete. However, I am still interested in finding a better way to let the user choose the number of dice.
+
+### Reaserch and new ideas
+I started reaserching this topic and found someone on **Stack Overflow** who had a similar problem five years ago. Here is the link to the question:
+https://stackoverflow.com/questions/67129800/how-to-use-options-like-1-2-3-etc-in-python-for-implementing-different-code
+I decided to analyse the question with ChatGPT to find out wether I could use something like a `swich` function or a default option in my program.
+
+ChatGPT suggested that I should not focus on using `swich` because it would be unnecessary for my current project. I already know how to use `if` and `elif`, and using a different approach would add another concept to learn without solving my main problem in the simplest way.
+
+Instead, we discussed how I could avoid writing multiple `if` statements and craeting a separate variable for every die.
+
+I suggested using one variable for all the dice and connecting it to the user's input so that the program could roll as many dice as requested, up to a masimum of ten.
+
+ChatGPT explained that I was thinking in the right direction. However, instead of using a single variable to represent evry die. I could use a `list` to store the results of the dice rolls.
+
+This gave me a new idea for improving the program in the next phase. Rather than writing seperate instructions for each die, I could explore using a loop to repeat the rolling process and a list to store the results. 
+
+*What I learned*
+- I learned how to extend my existing program by adding support for a third die.
+- I practised using `if` and `elif` statements to control which code is executed.
+- I started thinking about how to make my code more flexible instead of writing separate instructions for every possible number of dice.
+- I learned that Python `lists` can store multiple values under a single variable name.
+- I discovered that loops could help me repeat the same action a specific number of times.
+- I started thinking abput how to store results so that I can analyse them later and calculate statistics.
+
+*Problems and challenges*
+- At first, I thought I would need to create a separate variable and another `elif` statement for every additional die.
+- I was uncure how to connect the user's input to the number of dice rolled.
+- I initially considered using a `swich` function, but I realised that I should first understand the simpler solutuins avaulable in Python.
+- I am still learning how loops work and how to use lists to store multiple results. I have not implemented these ideas yet, but I plan to explore them in the next phase. 
+
+*What remains from the project*
+Now that I have compleed the first phase, I can look back at what I have achived and what still needs to be done.
+
+So far, I have crated a basic dice simulator that allows the user to roll one, two, or three dice. I have also learned how to handle invalid input and use conditional statements to contol how the program works.
+
+However, the original project has severeal goals that I have not implenented yet: 
+- Loops: I need to learn how to repeat actions efficiently instead of writing seperate instructions for every die.
+- Lists: I need to learn how to store the results of multiple dice rolls.
+- Arrays: I need to explore how arrays work in Python and wether they would be useful for this project.
+- Dictionaries: I need to learn how to organise and count results using dictionaries.
+- Statistics: I need to calculate how often particular results appear and identify the most frequent results.
+- Probality and statistical distributions: I need to run repeated simulations and investigate how the results are distributed.
+- Text histogram: I need to display the results visually in the terminal using text.
+
+In the next phase, I will focus on these remaining requerments and build the statistical functionality of the simulator. Once the core project is complete, I will move on to my own ideas and additional features.
+
+## Phase 2
+In Phase 1, I created a basic dice simulator that can roll one, two, or three dice. However, the program currently generates and prints the results without storing them for further analysis.
+
+The main goal of Phase 2 is to run this basic simulator into a statistical tool. I will learn how to use loops, lists, arrays, and dictionaries while implementing the remaining project requirements, including statistical analysis, probability, distributions, and a text histogram. 
+
+I have divided Phase 2 into five parts. Each part builds on the previous one so that I can learn new concepts gradually and use them to improve the program.
+- Part 1 -- Loops and Dynamic Dice Selection
+I will learn how to use loops to repeat instructions and let the user choose how many dice to roll. The goal is to make the program more flexible without needing separate variables for every die.
+- Part 2 -- Lists and Storing Results
+I will learn how to use lists to store the results of dice rolls. This will allow me to reuse the data for statistical analysis.
+- Part 3 -- Statistics, Dictionaries, and Arrays
+I will calculate how often results occur and identify the most frequent outcomes. I will also explore dictionaries and arrays to understand how they can be used to organise and analyse data.
+- Part 4 -- Probability and Statidtical Distributions
+I will run repeated simulations and compare the observed results with expected probabilities. The goal is to understand how the number of dice affects the distribution of the results.
+- Part 5 -- Test Histogram and Integration
+I will create a text-based histogram to display the results in the terminal and combine the different features into working program. 
