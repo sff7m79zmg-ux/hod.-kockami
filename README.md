@@ -114,7 +114,7 @@ The main goal of Phase 2 is to run this basic simulator into a statistical tool.
 
 I have divided Phase 2 into five parts. Each part builds on the previous one so that I can learn new concepts gradually and use them to improve the program.
 - Part 1 -- Loops and Dynamic Dice Selection
-I will learn how to use loops to repeat instructions and let the user choose how many dice to roll. The goal is to make the program more flexible without needing separate variables for every die.
+I will learn how to use loops to repeat instructions and let the user choose how many dice to roll. The goal is to make the program more flexible without needing separate variable for every die.
 - Part 2 -- Lists and Storing Results
 I will learn how to use lists to store the results of dice rolls. This will allow me to reuse the data for statistical analysis.
 - Part 3 -- Statistics, Dictionaries, and Arrays
@@ -123,3 +123,35 @@ I will calculate how often results occur and identify the most frequent outcomes
 I will run repeated simulations and compare the observed results with expected probabilities. The goal is to understand how the number of dice affects the distribution of the results.
 - Part 5 -- Test Histogram and Integration
 I will create a text-based histogram to display the results in the terminal and combine the different features into working program. 
+
+### Part 1
+
+### What I worked on
+As mentioned in this part of the project roadmap, I started learning how to use loops to repeat instructions and make the dice simulator more flexible. The goal was to let the user choose the number of dice without creating a separate variable for every die.
+
+I practised using a `while` loop, a counter, and user input before applying these concepts to my existing program.
+
+*Problems I faced*
+- I initially used an incorrect condition in the `while` loop, which caused the loop to behave incorrectly.
+- I stuggled with Python indentation, which resulted in an IndentationError.
+- The program initially accepted invalid values, including 0 and numbers greater than 10.
+- I had to understand the difference between repeating a single die roll multiple times and rolling multiple dice.
+
+*What I learned*
+- How a `while` loop works and how condition determines when the loop stops.
+- Why a counter must be updated during each interation.
+- How to use comparison operators and conditional statements to validate user input.
+- How Python indentation defines blocks of code.
+- How `try` and `except` can handle invalid input.
+- Why loops are useful for avoiding separate variables and repetitive instructions.
+
+###  Learning process
+I received guidance and theoretical explanations about how the `while` loop works. Before implementing the solution, I practised writing the loop in a separate exercise and tried to solve the problems myself with hints and feedback. After understanding the logic, I applied it to my existing program.
+
+*Results*
+I successfully resolved the initial problems and got the working input validation that accepts values from 1 to 10 and rejects invalid values outside that range.
+
+I also developed a better understanding of how loops and counters work together. This provides the foundation for implementing dynamic dice selection without needing separate variables for each die.
+
+*Status* 
+Part 1 completed successfully. The concepts have been practised and applied to projects. The next step is to learn how use lists to store dice results for further statistical analysis.
