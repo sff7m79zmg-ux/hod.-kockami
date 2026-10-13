@@ -56,6 +56,7 @@ import random
 # CURRENT WORKING EXERCISE
 # Roll one die a chosen number of time
 
+vysledky = []
 repeats = 0
 thechosen = input("How many times should I roll? ")
 
@@ -64,8 +65,12 @@ try:
 
     while repeats < thechosen:
         kocka = random.randint(1, 6)
+        vysledky.append(kocka)
         print("You rolled:", kocka)
         repeats = repeats + 1
 
+    sucet=sum(vysledky)
+    print("The rolls were:", vysledky) 
+    print("The sum of your rolls is:", sucet)
 except ValueError:
     print("You entered an invalid value!")

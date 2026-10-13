@@ -155,3 +155,20 @@ I also developed a better understanding of how loops and counters work together.
 
 *Status* 
 Part 1 completed successfully. The concepts have been practised and applied to projects. The next step is to learn how use lists to store dice results for further statistical analysis.
+
+### Part 2 
+
+### What I worked on
+As mentioned in this part of the project roadmap, I wanted to learn to how to use lists to store dice roll results for further statistical analysis. I implemented an empty list called `vysledky` and used the `append()` method to save each result during the loop.
+
+*Problems I faced*
+
+- Understanding how lists store multiple values.
+- Learning why `append()` must be inside the loop to save every roll.
+- Understanding how to work with stored results after the loop finishes.
+
+*What I learned*
+
+- How to create an empty list using [].
+- How to add elements to list using `append()`.
+- Ho
