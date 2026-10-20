@@ -1,7 +1,7 @@
 import random 
 thechosen=input("Zadaj kolkimi kockami chces hodit(maximalne do 3):")
 kocky=0
-vysledky=[]
+vysledky=[] 
 try:
     thechosen=int(thechosen)
     if 1 <= thechosen <= 3:

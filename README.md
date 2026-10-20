@@ -119,7 +119,7 @@ I will learn how to use loops to repeat instructions and let the user choose how
 I will learn how to use lists to store the results of dice rolls. This will allow me to reuse the data for statistical analysis.
 - Part 3 -- Statistics, Dictionaries, and Arrays
 I will calculate how often results occur and identify the most frequent outcomes. I will also explore dictionaries and arrays to understand how they can be used to organise and analyse data.
-- Part 4 -- Probability and Statidtical Distributions
+- Part 4 -- Probability and Statistical Distributions
 I will run repeated simulations and compare the observed results with expected probabilities. The goal is to understand how the number of dice affects the distribution of the results.
 - Part 5 -- Test Histogram and Integration
 I will create a text-based histogram to display the results in the terminal and combine the different features into working program. 
@@ -169,6 +169,17 @@ As mentioned in this part of the project roadmap, I wanted to learn to how to us
 
 *What I learned*
 
-- How to create an empty list using [].
+- How to create an empty list using [ ].
 - How to add elements to list using `append()`.
-- Ho
+- How to display all stored results.
+- How to calculate the sum of a list using `sum()`.
+- How to seuse stored data for further statistical analysis.
+
+*Learning process*
+I used W3Schools learning resources and ChatGPT to understand lists and their methods. I first practised the concept separately and then implemented them into my existing dice simulator. I tested the code and used the results to understand how the list changes during the loop. 
+
+*Results*
+The program now stores every dice roll in a list, displays all the results, and calculates their total sum. This makes the results available for further processing instead of losing each individual roll after displaying it.
+
+*Status*
+Part 2 completed successfully. I have learned the basics of storing and processing data with lists and I am readz to continue with statistics, dictionaries and arrays in Part 3.
